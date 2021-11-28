@@ -7,7 +7,7 @@ const serviceAccount = require("./serviceAccountKey.json");
 
 admin.initializeApp({
   credential: admin.credential.cert(serviceAccount),
-  databaseURL: "https://studycase-60f0a.iam.gserviceaccount.com",
+  databaseURL: "http://localhost:5000",
 });
 
 const PORT = process.env.PORT || 3000;

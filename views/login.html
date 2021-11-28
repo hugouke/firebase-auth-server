@@ -22,14 +22,17 @@
       <section>
         <form id="login">
           <label>Login</label>
-          <br/>
+          <br />
           <input type="text" name="login" />
-          <br/>
+          <br />
           <label>Password</label>
-          <br/>
+          <br />
           <input type="password" name="password" />
-          <br/>
+          <br />
           <button>Log in</button>
+          <br />
+          <br />
+          <a href="/signup"> Create your account </a>
         </form>
       </section>
 
@@ -37,7 +40,7 @@
         window.addEventListener("DOMContentLoaded", () => {
           const firebaseConfig = {
             apiKey: "AIzaSyCZuco0ahbftfhDWWkhnR2t0UKn7ChSp5o",
-            authDomain: "studycase-60f0a.firebaseapp.com",
+            authDomain: "localhost:9099",
             projectId: "studycase-60f0a",
             storageBucket: "studycase-60f0a.appspot.com",
             messagingSenderId: "632281606349",
@@ -65,7 +68,6 @@
                       headers: {
                         Accept: "application/json",
                         "Content-Type": "application/json",
-                        "CSRF-Token": Cookies.get("XSRF-TOKEN"),
                       },
                       body: JSON.stringify({ idToken }),
                     });
